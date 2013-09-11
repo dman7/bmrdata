@@ -5,3 +5,20 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+p = Property.find_by_name("All Hallows Apartments")
+
+if p.nil?
+	Property.create(
+		:name => "All Hallows Apartments", 
+		:address => "65 Navy Road", 
+		:district => "Bayview",
+		:city => "San Francisco",
+		:zip_code => "94124", 
+		:bmr_units => 157, 
+		:phone_number => "6478439",
+		:website_address => "http://www.aimco.com/"
+	)
+
+end
